@@ -1,4 +1,4 @@
-# Blitz speed reading trainer add-on for Anki
+# Blitz Speed Reading Trainer add-on for Anki
 ## Description
 The goal of this add-on is to force you to come up with the answer immediately in order to improve your speed-reading abilities in foreign languages.
 ## Usage
