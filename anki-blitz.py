@@ -35,7 +35,7 @@ def myDefaultEase(self):
     if elapsed_time < 1:
         return 3
     if elapsed_time < 3:
-    return 2
+        return 2
     else:
         return 1
 
