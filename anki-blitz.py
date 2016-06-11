@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+#
 # Blitz speed reading trainer add-on for Anki
 #
 # Copyright (C) 2016  Jakub Szypulka, Dave Shifflett
@@ -31,12 +31,12 @@ def onShowQuestion():
 addHook('showQuestion', onShowQuestion)
 
 def myDefaultEase(self):
-    elapsed_time = time.time() - start_time       # How much time elapsed?
-    if elapsed_time < 1:                          # If less than 1s...
-        return 3                                  # suggest "Easy"/"Normal".
-    if elapsed_time < 3:                          # If less than 3s...
-        return 2                                  # suggest "Hard".
-    else:                                         # If more than 3s...
-        return 1                                  # suggest "Again".
+    elapsed_time = time.time() - start_time
+    if elapsed_time < 1:
+        return 3
+    if elapsed_time < 3:
+    return 2
+    else:
+        return 1
 
-Reviewer._defaultEase = myDefaultEase             # Replace default ease function
+Reviewer._defaultEase = myDefaultEase
