@@ -17,19 +17,21 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+from anki.hooks import addHook
 from aqt.reviewer import Reviewer
 import time
 
 
-def myShow(self):                  # Customize the show() function by...
-    origShow(self)                 # executing the function as usual (1/2),...
-    self.start_time = time.time()  # but starting a timer.
+start_time = None
 
-origShow = Reviewer.show           # Execute the function as usual (2/2)
-Reviewer.show = myShow             # Execute the function as usual (3/3)
+def onShowQuestion():
+    global start_time
+    start_time = time.time()
+
+addHook('showQuestion', onShowQuestion)
 
 def myDefaultEase(self):
-    elapsed_time = time.time() - self.start_time  # How much time elapsed?
+    elapsed_time = time.time() - start_time       # How much time elapsed?
     if elapsed_time < 1:                          # If less than 1s...
         return 3                                  # suggest "Easy"/"Normal".
     if elapsed_time < 3:                          # If less than 3s...
