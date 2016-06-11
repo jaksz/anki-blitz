@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#
+
 # Blitz speed reading trainer add-on for Anki
 #
 # Copyright (C) 2016  Jakub Szypulka, Dave Shifflett
