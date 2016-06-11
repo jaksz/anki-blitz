@@ -2,7 +2,7 @@
 
 # Blitz speed reading trainer add-on for Anki
 #
-# Copyright (C) 2016  Jakub Szypulka <jakub AT szypulka.de>
+# Copyright (C) 2016  Jakub Szypulka, Dave Shifflett
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
