@@ -32,7 +32,7 @@ addHook('showQuestion', onShowQuestion)
 
 def myDefaultEase(self):
     elapsed_time = time.time() - start_time
-    if elapsed_time < 2:
+    if elapsed_time < 1.5:
         return 3
     if elapsed_time < 5:
         return 2
